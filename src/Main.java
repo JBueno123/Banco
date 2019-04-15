@@ -1,17 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author Estudiante
- */
+import java.util.*;
 public class Main {
+public static int leer(){
+int lec;    
+Scanner i = new Scanner (System.in);
+lec = i.nextInt(); 
+return lec;
+}
+public String leerstring(){
+String lec;    
+Scanner i = new Scanner (System.in);
+lec = i.nextLine(); 
+return lec;
+}
+
+public static boolean consignar (int deposito, int cuenta, int clave  ){
+    System.out.println("Inserte su numero de cuenta");
+    cuenta = leer ();
+    System.out.println("Inserte su clave");
+   return true;
+    } 
+
     public static void main(String[] args) {
-        Perro p1 = new Perro();
-        p1.nombre = "doge";
-        System.out.println(p1.nombre);
+        Banco A = new Banco(1012, 1234, "Magdalena sanchez ", 0);
+        Banco B =  new Banco(1013, 9876, "Joselito Perez ", 500000);
+        int deposito = leer();
+        A.consignar(deposito);
     }
 }
+
